@@ -287,7 +287,10 @@ def main():
         # guess number
         while again == 0:
             user_input = input('Input guess number : ')
-            if is_validated_number(user_input):
+            if user_input == '0':
+                again = -1
+                break
+            elif is_validated_number(user_input):
                 result = get_strikes_or_ball(user_input, random_number)
             else:
                 print('Wrong Input, Input again')
