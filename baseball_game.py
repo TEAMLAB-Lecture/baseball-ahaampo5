@@ -191,9 +191,9 @@ def get_strikes_or_ball(user_input_number, random_number):
     str_random_number = random_number[:]
     for i in str_user_number:
         for j in str_random_number:
-            if i == j and str_user_number.index(i) == str_random_number.index(j):
+            if i == j and str_user_number.find(i) == str_random_number.find(j):
                 result[0] += 1
-            elif i == j and str_user_number.index(i) != str_random_number.index(j):
+            elif i == j and str_user_number.find(i) != str_random_number.find(j):
                 result[1] += 1
             else:
                 continue
